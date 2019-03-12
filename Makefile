@@ -123,6 +123,7 @@ devtools-stamp: tools
 	@echo "--> Downloading linters (this may take awhile)"
 	$(GOPATH)/src/github.com/alecthomas/gometalinter/scripts/install.sh -b $(GOBIN)
 	go get github.com/tendermint/lint/golint
+	go install ./cmd/sdkch
 	touch $@
 
 vendor-deps: tools
