@@ -36,8 +36,8 @@ type Context struct {
 func NewDefaultContext() *Context {
 	return NewContext(
 		cfg.DefaultConfig(),
-		log.NewTMLogger(log.NewSyncWriter(os.Stdout)),
-	)
+		log.NewTMJSONLogger(log.NewSyncWriter(os.Stdout)))
+
 }
 
 func NewContext(config *cfg.Config, logger log.Logger) *Context {
